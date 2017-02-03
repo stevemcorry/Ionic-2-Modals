@@ -5,7 +5,7 @@ import { ModalBasic } from '../../modals/modal-basic/modal-basic';
 
 @Component({
   selector: 'page-modal-show',
-  templateUrl: 'modal-show.html'
+  templateUrl: 'page-basic.html'
 })
 export class ModalShowPage {
   constructor(public modCtrl: ModalController) {

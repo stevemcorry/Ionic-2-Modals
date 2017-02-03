@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Modal With Parameters</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="openModal(input)">Modal Parameters</button>
+  <div>Write something to send to the modal</div>
+  <input type="text" [(ngModel)]="input">
+</ion-content>
