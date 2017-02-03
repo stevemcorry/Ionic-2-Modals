@@ -1,20 +1,26 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+
+//Pages
 import { ModalParamsPage } from '../pages/page-params/page-params';
 import { ModalShowPage } from '../pages/page-basic/page-basic';
-//import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+
+//Modals
 import { ModalBasic } from '../modals/modal-basic/modal-basic';
 import { ModalParams } from '../modals/modalParams/modalParams';
 
 @NgModule({
   declarations: [
     MyApp,
+    
+    //Pages
     ModalParamsPage,
     ModalShowPage,
-    //HomePage,
     TabsPage,
+
+    //Modals
     ModalBasic,
     ModalParams
   ],
@@ -24,10 +30,13 @@ import { ModalParams } from '../modals/modalParams/modalParams';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+
+    //Pages
     ModalParamsPage,
     ModalShowPage,
-    //HomePage,
     TabsPage,
+
+    //Modals
     ModalBasic,
     ModalParams
   ],

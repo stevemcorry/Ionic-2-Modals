@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
+
+// Import ModalController
+import { ModalController } from 'ionic-angular';
+
+//Import the Component you want to use as a modal
 import { ModalParams } from '../../modals/modalParams/modalParams';
-import { NavController, ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-modal-params',
@@ -8,11 +12,15 @@ import { NavController, ModalController } from 'ionic-angular';
 })
 export class ModalParamsPage {
 
-  constructor(public navCtrl: NavController, public modCtrl: ModalController) {
+//Inject the modal controller
+  constructor(public modCtrl: ModalController) {
   }
 
   openModal(input) {
+    //create the modal and pass in the parameters
     let modal = this.modCtrl.create(ModalParams, {param: input});
+
+    //open the new modal
     modal.present();
   }
 

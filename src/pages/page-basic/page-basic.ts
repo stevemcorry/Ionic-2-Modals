@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
+
+//import modal controller
+import { ModalController } from 'ionic-angular';
+
+//import the component you want to use as a modal
 import { ModalBasic } from '../../modals/modal-basic/modal-basic';
 
 
@@ -8,12 +12,16 @@ import { ModalBasic } from '../../modals/modal-basic/modal-basic';
   templateUrl: 'page-basic.html'
 })
 export class ModalShowPage {
+  // inject the modal controller
   constructor(public modCtrl: ModalController) {
   }
 
-  openModal(characterNum) {
+  openModal() {
 
-    let modal = this.modCtrl.create(ModalBasic, characterNum);
+    // create the modal
+    let modal = this.modCtrl.create(ModalBasic);
+
+    //open the new modal
     modal.present();
   }
 
