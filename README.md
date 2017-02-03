@@ -29,4 +29,30 @@ export class ModalShowPage {
   }
 }
 ```
+
+In the Modal Component itself
+  
+```typescript
+import { Component } from '@angular/core';
+ //Import the view controller (used to close the modal)
+import { ViewController } from 'ionic-angular';
+
+@Component({
+  templateUrl: 'modal-basic.html'
+})
+export class ModalBasic {
+//inject the view controller
+  constructor(public viewCtrl: ViewController) { }
+  dismiss(){
+  // close the modal
+      this.viewCtrl.dismiss();
+  }
+}
+```
+
 ##### *Remember to import the Modal component in your app.module.ts, then add to the declarations and entry components!
+
+
+
+### Modal With Parameters
+
